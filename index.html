@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Review Detector</title>
+    <link rel="stylesheet" href="/static/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Fake Review Detection</h1>
+        <form method="POST" action="/predict">
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    name="review" 
+                    placeholder="Enter your review here..." 
+                    required 
+                />
+            </div>
+            <button type="submit">Check Review</button>
+        </form>
+        <!-- Dynamic result display -->
+        {% if result %}
+        <div class="result">
+            <h3>Review:</h3>
+            <p>{{ review }}</p>
+            <h3>Prediction:</h3>
+            <p>{{ result }}</p>
+            <h3>Accuracy:</h3>
+            <p>{{ accuracy }}%</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
