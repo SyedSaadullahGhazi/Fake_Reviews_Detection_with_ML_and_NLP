@@ -1,0 +1,155 @@
+/* Global styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    --u: 5px;
+    --c1: #ededee;
+    --c2: #000000;
+    --c3: #1e1e1e;
+    --gp: 50% / calc(var(--u) * 16.9) calc(var(--u) * 12.8);
+    background: conic-gradient(
+            from 122deg at 50% 85.15%,
+            var(--c2) 0 58deg,
+            var(--c3) 0 116deg,
+            #fff0 0 100%
+        )
+        var(--gp),
+        conic-gradient(from 122deg at 50% 72.5%, var(--c1) 0 116deg, #fff0 0 100%)
+        var(--gp),
+        conic-gradient(from 58deg at 82.85% 50%, var(--c3) 0 64deg, #fff0 0 100%)
+        var(--gp),
+        conic-gradient(
+            from 58deg at 66.87% 50%,
+            var(--c1) 0 64deg,
+            var(--c2) 0 130deg,
+            #fff0 0 100%
+        )
+        var(--gp),
+        conic-gradient(from 238deg at 17.15% 50%, var(--c2) 0 64deg, #fff0 0 100%)
+        var(--gp),
+        conic-gradient(
+            from 172deg at 33.13% 50%,
+            var(--c3) 0 66deg,
+            var(--c1) 0 130deg,
+            #fff0 0 100%
+        )
+        var(--gp),
+        linear-gradient(98deg, var(--c3) 0 15%, #fff0 calc(15% + 1px) 100%)
+        var(--gp),
+        linear-gradient(-98deg, var(--c2) 0 15%, #fff0 calc(15% + 1px) 100%)
+        var(--gp),
+        conic-gradient(
+            from -58deg at 50.25% 14.85%,
+            var(--c3) 0 58deg,
+            var(--c2) 0 116deg,
+            #fff0 0 100%
+        )
+        var(--gp),
+        conic-gradient(from -58deg at 50% 28.125%, var(--c1) 0 116deg, #fff0 0 100%)
+        var(--gp),
+        linear-gradient(90deg, var(--c2) 0 50%, var(--c3) 0 100%) var(--gp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Input container styles */
+.input-container {
+    display: flex;
+    background: rgb(124, 81, 81);
+    border-radius: 1rem;
+    background: linear-gradient(173deg, #23272f 0%, #506184 100%);
+    box-shadow: 10px 10px 20px #334b6f, -10px -10px 40px #383e4b;
+    padding: 0.3rem;
+    gap: 0.3rem;
+    margin: 20px 0;
+}
+
+.input-container input {
+    border-radius: 0.8rem;
+    background: #4e6188;
+    box-shadow: inset 5px 5px 10px hsl(217, 19%, 27%), inset -5px -5px 10px #383e4b,
+        0px 0px 100px rgba(69, 64, 46, 0), 0px 0px 100px rgba(255, 102, 0, 0);
+    width: 100%;
+    flex-basis: 100%;
+    padding: 1rem;
+    border: none;
+    border: 1px solid transparent;
+    color: rgba(240, 243, 242, 0.952);
+    transition: all 0.2s ease-in-out;
+}
+
+.input-container input:focus {
+    border: 1px solid #ffd43b;
+    outline: none;
+    box-shadow: inset 0px 0px 10px rgba(255, 102, 0, 0.5),
+        inset 0px 0px 10px rgba(255, 212, 59, 0.5),
+        0px 0px 100px rgba(255, 212, 59, 0.5),
+        0px 0px 100px rgba(255, 102, 0, 0.5);
+}
+
+@media (max-width: 500px) {
+    .input-container {
+        flex-direction: column;
+    }
+
+    .input-container input {
+        border-radius: 0.8rem;
+    }
+}
+
+/* Button styles */
+button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+/* Result box styles */
+.result {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
